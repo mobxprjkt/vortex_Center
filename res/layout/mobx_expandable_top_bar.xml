@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015-2020 AOSiP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    	
+    <mobx.projects.property.navigation.BubbleNavigationConstraintView
+        android:id="@+id/bottom_navigation_view_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="74.0dip"
+        android:layout_marginLeft="15.099976dip"
+        android:layout_marginRight="15.099976dip"
+        android:background="@drawable/mobx_preference_single_item_bg"
+        android:paddingTop="1.3999939dip"
+        android:elevation="0.0dp"
+        android:layout_gravity="center|top"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        mobx:vortex_mode="spread">
+
+        <mobx.projects.property.navigation.BubbleToggleView
+            android:id="@+id/system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mobx:vortex_active="true"
+            mobx:vortex_padding="23.0dip"
+            mobx:vortex_titlePadding="4dp"
+            mobx:vortex_colorActive="@color/green_active"
+            mobx:vortex_colorInactive="@color/green_inactive"
+            mobx:vortex_icon="@drawable/navigation_system"
+            mobx:vortex_shape="@drawable/navigation_transition_background_drawable_system"
+            mobx:vortex_title="@string/navigation_system_title" />
+
+        <mobx.projects.property.navigation.BubbleToggleView
+            android:id="@+id/lockscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mobx:vortex_padding="17.0dip"
+            mobx:vortex_titlePadding="4dp"
+            mobx:vortex_colorActive="@color/red_active"
+            mobx:vortex_colorInactive="@color/red_inactive"
+            mobx:vortex_icon="@drawable/navigation_lockscreen"
+            mobx:vortex_shape="@drawable/navigation_transition_background_drawable_lockscreen"
+            mobx:vortex_title="@string/navigation_lockscreen_title" />
+
+        <mobx.projects.property.navigation.BubbleToggleView
+            android:id="@+id/statusbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mobx:vortex_padding="17.0dip"
+            mobx:vortex_titlePadding="4dp"
+            mobx:vortex_colorActive="@color/blue_active"
+	    mobx:vortex_colorInactive="@color/blue_inactive"
+            mobx:vortex_icon="@drawable/navigation_statusbar"
+            mobx:vortex_shape="@drawable/navigation_transition_background_drawable_statusbar"
+            mobx:vortex_title="@string/navigation_statusbar_title" />
+
+        <mobx.projects.property.navigation.BubbleToggleView
+            android:id="@+id/hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mobx:vortex_padding="23.0dip"
+            mobx:vortex_titlePadding="4dp"
+            mobx:vortex_colorActive="@color/amber_active"
+            mobx:vortex_colorInactive="@color/amber_inactive"
+            mobx:vortex_icon="@drawable/navigation_hardware"
+            mobx:vortex_shape="@drawable/navigation_transition_background_drawable_hardware"
+	        mobx:vortex_title="@string/navigation_hardware_title" />
+
+    </mobx.projects.property.navigation.BubbleNavigationConstraintView>
+    
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_navigation_view_constraint"/>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- use whatever drawables you want, gradients, shapes etc-->
+    <item android:drawable="@android:color/transparent"/>
+    <item android:drawable="@drawable/system_background_oval" android:left="4.0dip" android:top="8.0dip" android:right="4.0dip" android:bottom="8.0dip" />
+</transition>
